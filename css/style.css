@@ -30,7 +30,7 @@ header .section {
     height: 47px;
 }
 
-.content > * {
+[class^='content'] > * {
     background-color: #daa520;
     border: 2px dashed black;
     font-size: 20px;
@@ -67,7 +67,6 @@ header .section {
 
 main {
     background-color: #add8e6;
-    height: 500vh;
 }
 
 /* 1° SECTION */
@@ -76,7 +75,7 @@ main {
     padding: 50px 500px;
 }
 
-.content1 {
+.content-header {
     background-color: #ee82ee;
     min-height: 458px;
     border: 2px dashed black;
@@ -90,20 +89,21 @@ main > .section.header:first-child {
 
 /* 2° SECTION --------------------*/
 
-main > .section > .content {
+main > .section > .content-main {
     display: flex;
     min-height: 500px;
 }
-.content.reverse {
+.content-main.reverse {
     flex-direction: row-reverse;
 }
-.content > .text {
-    flex-grow: 3;
+.content-main > .text {
+    background-color: #1e90ff;
+    flex-basis: 60%;
 }
-.content > .img {
-    flex-grow: 2;
+.content-main > .img {
+    background-color: #ffc0cb;
+    flex-grow: 1;
 }
-
 
 /* REST SECTION MAIN */
 main > .section:nth-child(even) {
@@ -113,3 +113,44 @@ main > .section:nth-child(odd) {
     background-color: #d3d3d3;
 }
 
+.content-main-footer {
+    border: 2px dashed black;
+    background-color: #228b22;
+    min-height: 900px;
+}
+
+/* FOOTER ------------------------*/
+
+.section.footer {
+    background-color: #23272a;
+    padding-top: 10px;
+}
+
+.section.footer.top {
+    display: flex;
+    border-bottom: 2px solid #9a9a9a;
+}
+
+.content-second {
+    border: 2px dashed #000;
+    display: flex;
+    min-height: 500px;
+    background-color: #20b2aa;
+}
+
+.content-first {
+    border: 2px dashed #000;
+    background-color: #f08080;
+    flex-grow: 1;
+}
+.content-second {
+    display: flex;
+    border: 2px dashed #000;
+    flex-basis: 70%;
+}
+
+.content-second .content-footer {
+    background-color: #20b2aa;
+    border: 2px dashed #fff;
+    flex-grow: 1;
+}
