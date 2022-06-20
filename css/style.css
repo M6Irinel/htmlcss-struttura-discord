@@ -21,22 +21,29 @@ a {
     padding: 50px 360px;
 }
 
-/* HEADER -------------------------*/
+[class^='content']:not(.content-footer-bottom) > *, .content-header, .content-main-footer, .content-first, .content-second, .button-footer > a {
+    border: 2px dashed black;
+}
+
+.content, .content-footer-bottom > ul, .content-second, .content-second, .section.footer.top, main > .section > .content-main, .nav-link {
+    display: flex;
+}
+
+/* HEADER --------------------------------------------------------------------*/
 
 header .section {
     background-color: #add8e6;
     padding: 17px 360px;
 }
 
-.content {
-    display: flex;
+.content, .content-footer-bottom > ul {
     justify-content: space-between;
+}
+
+.content {
     height: 47px;
 }
 
-[class^='content']:not(.content-footer-bottom) > * {
-    border: 2px dashed black;
-}
 
 [class^='content'] > * {
     background-color: #daa520;
@@ -44,6 +51,7 @@ header .section {
     align-items: center;
     line-height: 45px;
 }
+
 [class^='content'] > * * {
     color: black;
 }
@@ -52,6 +60,7 @@ header .section {
     flex-basis: 20%;
     padding-left: 10px;
 }
+
 .content > .nav-link {
     flex-basis: 60%;
 }
@@ -63,12 +72,11 @@ header .section {
 }
 
 .nav-link {
-    display: flex;
     gap: 10px;
     justify-content: center;
 }
 
-/* MAIN ---------------------------*/
+/* MAIN ----------------------------------------------------------------------*/
 
 main {
     background-color: #add8e6;
@@ -82,20 +90,18 @@ main {
 
 .content-header {
     background-color: #ee82ee;
-    min-height: 458px;
-    border: 2px dashed black;
-    margin-bottom: 2px;
+    min-height: 400px;
 }
 
 main > .section.header:first-child {
     background-color: #00008b;
+    margin-bottom: 4px;
     
 }
 
 /* 2° SECTION --------------------*/
 
-main > .section > .content-main {
-    display: flex;
+main > .section > .content-main, .content-second {
     min-height: 500px;
 }
 .content-main.reverse {
@@ -105,12 +111,17 @@ main > .section > .content-main {
     background-color: #1e90ff;
     flex-basis: 60%;
 }
-.content-main > .img {
-    background-color: #ffc0cb;
+
+.content-main > .img, .content-first, .content-second .content-footer {
     flex-grow: 1;
 }
 
-/* REST SECTION MAIN */
+
+.content-main > .img {
+    background-color: #ffc0cb;
+}
+
+/* REST SECTION MAIN --------------*/
 main > .section:nth-child(even) {
     background-color: #ffffff;
 }
@@ -119,62 +130,49 @@ main > .section:nth-child(odd) {
 }
 
 .content-main-footer {
-    border: 2px dashed black;
     background-color: #228b22;
     min-height: 900px;
 }
 
-/* FOOTER ------------------------*/
+/* FOOTER ---------------------------------------------------------------------*/
+
+.section.footer.top, .section.footer.bottom {
+    background-color: #23272a;
+    border-bottom: 2px solid #9a9a9a;
+}
 
 .section.footer.top {
-    background-color: #23272a;
     padding-top: 10px;
     padding-bottom: 40px;
-    display: flex;
-    border-bottom: 2px solid #9a9a9a;
     min-height: 600px;
 }
 
 .section.footer.bottom {
-    background-color: #23272a;
     padding-bottom: 0;
-    border-bottom: 2px solid #9a9a9a;
 }
 
-.content-second {
-    border: 2px dashed #000;
-    display: flex;
-    min-height: 500px;
+.content-second, .content-second .content-footer {
     background-color: #20b2aa;
 }
 
 .content-first {
-    border: 2px dashed #000;
     background-color: #f08080;
-    flex-grow: 1;
 }
 .content-second {
-    display: flex;
-    border: 2px dashed #000;
     flex-basis: 70%;
 }
 
 .content-second .content-footer {
-    background-color: #20b2aa;
     border: 2px dashed #fff;
-    flex-grow: 1;
 }
 
 .content-footer-bottom > ul {
-    display: flex;
-    justify-content: space-between;
     padding: 18px 0;
     background-color: #7fffd4;
 }
 
 .button-footer > a {
     background-color: #ffb6c1;
-    border: 2px dashed black;
     padding: 5px 10px;
 }
 
